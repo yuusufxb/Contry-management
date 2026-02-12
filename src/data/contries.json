@@ -1,0 +1,79 @@
+{
+  "countries": [
+    {
+      "id": 1,
+      "name": "France",
+      "officialName": "French Republic",
+      "code": "FR",
+      "capital": "Paris",
+      "region": "Europe",
+      "subregion": "Western Europe",
+      "population": 67390000,
+      "areaKm2": 551695,
+      "currency": {
+        "name": "Euro",
+        "code": "EUR",
+        "symbol": "€"
+      },
+      "languages": ["French"],
+      "timezone": "UTC+1",
+      "flag": "https://flagcdn.com/fr.svg",
+      "coordinates": {
+        "lat": 46.2276,
+        "lng": 2.2137
+      },
+      "lineName": "Western Europe Line",
+      "opacity": 0.85
+    },
+    {
+      "id": 2,
+      "name": "Japan",
+      "officialName": "State of Japan",
+      "code": "JP",
+      "capital": "Tokyo",
+      "region": "Asia",
+      "subregion": "Eastern Asia",
+      "population": 125700000,
+      "areaKm2": 377975,
+      "currency": {
+        "name": "Yen",
+        "code": "JPY",
+        "symbol": "¥"
+      },
+      "languages": ["Japanese"],
+      "timezone": "UTC+9",
+      "flag": "https://flagcdn.com/jp.svg",
+      "coordinates": {
+        "lat": 36.2048,
+        "lng": 138.2529
+      },
+      "lineName": "Asia Pacific Line",
+      "opacity": 0.75
+    },
+    {
+      "id": 3,
+      "name": "Brazil",
+      "officialName": "Federative Republic of Brazil",
+      "code": "BR",
+      "capital": "Brasília",
+      "region": "Americas",
+      "subregion": "South America",
+      "population": 203100000,
+      "areaKm2": 8515767,
+      "currency": {
+        "name": "Brazilian Real",
+        "code": "BRL",
+        "symbol": "R$"
+      },
+      "languages": ["Portuguese"],
+      "timezone": "UTC-3",
+      "flag": "https://flagcdn.com/br.svg",
+      "coordinates": {
+        "lat": -14.2350,
+        "lng": -51.9253
+      },
+      "lineName": "South America Line",
+      "opacity": 0.65
+    }
+  ]
+}
