@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import contriesreducer from '../features/contries/contriesSlice'
 
-const store = configureStore({
+export const store = configureStore({
     reducer:{
         contries:contriesreducer,
     },
