@@ -1,0 +1,24 @@
+
+import { Link, useNavigate } from "react-router-dom"
+export function Navbar(){
+    const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    const path = e.target.value;
+    if (path) 
+        navigate(path); 
+  };
+
+  return (
+    <div>
+        <Link to={'/'}>Home</Link>
+        <Link to={'/world-total-population'}>total population </Link>
+        <select onChange={handleChange}>
+            <option value="">Select by →</option>
+            <option value="/countries/by-name">Name</option>
+            <option value="/countries/by-capital">Capital</option>
+            <option value="/countries/by-population">Population</option>
+        </select>
+    </div>
+  );
+}

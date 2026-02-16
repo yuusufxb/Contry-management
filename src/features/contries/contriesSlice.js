@@ -1,7 +1,10 @@
 import { asyncThunkCreator, createSlice } from '@reduxjs/toolkit'
+import { useDispatch } from 'react-redux'
+import { Await , async } from 'react-router-dom';
+import countries from '../../data/contries.json'
 
 const initialState = {
-  list: ["marocooo"],        
+  list:[countries] ,        
   status: 'idle',  
   error: null,
 }
