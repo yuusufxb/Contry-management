@@ -74,6 +74,256 @@
       },
       "lineName": "South America Line",
       "opacity": 0.65
+    },  
+    {
+      "id": 4,
+      "name": "Canada",
+      "officialName": "Canada",
+      "code": "CA",
+      "capital": "Ottawa",
+      "region": "Americas",
+      "subregion": "Northern America",
+      "population": 39590000,
+      "areaKm2": 9984670,
+      "currency": {
+        "name": "Canadian Dollar",
+        "code": "CAD",
+        "symbol": "$"
+      },
+      "languages": ["English", "French"],
+      "timezone": "UTC-5 to UTC-8",
+      "flag": "https://flagcdn.com/ca.svg",
+      "coordinates": {
+        "lat": 56.1304,
+        "lng": -106.3468
+      },
+      "lineName": "North America Line",
+      "opacity": 0.8
+    },
+    {
+      "id": 5,
+      "name": "Germany",
+      "officialName": "Federal Republic of Germany",
+      "code": "DE",
+      "capital": "Berlin",
+      "region": "Europe",
+      "subregion": "Western Europe",
+      "population": 83240000,
+      "areaKm2": 357022,
+      "currency": {
+        "name": "Euro",
+        "code": "EUR",
+        "symbol": "€"
+      },
+      "languages": ["German"],
+      "timezone": "UTC+1",
+      "flag": "https://flagcdn.com/de.svg",
+      "coordinates": {
+        "lat": 51.1657,
+        "lng": 10.4515
+      },
+      "lineName": "Western Europe Line",
+      "opacity": 0.85
+    },
+    {
+      "id": 6,
+      "name": "Australia",
+      "officialName": "Commonwealth of Australia",
+      "code": "AU",
+      "capital": "Canberra",
+      "region": "Oceania",
+      "subregion": "Australia and New Zealand",
+      "population": 25690000,
+      "areaKm2": 7692024,
+      "currency": {
+        "name": "Australian Dollar",
+        "code": "AUD",
+        "symbol": "$"
+      },
+      "languages": ["English"],
+      "timezone": "UTC+10",
+      "flag": "https://flagcdn.com/au.svg",
+      "coordinates": {
+        "lat": -25.2744,
+        "lng": 133.7751
+      },
+      "lineName": "Oceania Line",
+      "opacity": 0.7
+    },
+    {
+      "id": 7,
+      "name": "India",
+      "officialName": "Republic of India",
+      "code": "IN",
+      "capital": "New Delhi",
+      "region": "Asia",
+      "subregion": "Southern Asia",
+      "population": 1412000000,
+      "areaKm2": 3287263,
+      "currency": {
+        "name": "Indian Rupee",
+        "code": "INR",
+        "symbol": "₹"
+      },
+      "languages": ["Hindi", "English"],
+      "timezone": "UTC+5:30",
+      "flag": "https://flagcdn.com/in.svg",
+      "coordinates": {
+        "lat": 20.5937,
+        "lng": 78.9629
+      },
+      "lineName": "South Asia Line",
+      "opacity": 0.75
+    },
+    {
+      "id": 8,
+      "name": "Italy",
+      "officialName": "Italian Republic",
+      "code": "IT",
+      "capital": "Rome",
+      "region": "Europe",
+      "subregion": "Southern Europe",
+      "population": 59550000,
+      "areaKm2": 301340,
+      "currency": {
+        "name": "Euro",
+        "code": "EUR",
+        "symbol": "€"
+      },
+      "languages": ["Italian"],
+      "timezone": "UTC+1",
+      "flag": "https://flagcdn.com/it.svg",
+      "coordinates": {
+        "lat": 41.8719,
+        "lng": 12.5674
+      },
+      "lineName": "Southern Europe Line",
+      "opacity": 0.85
+    },
+    {
+      "id": 9,
+      "name": "Mexico",
+      "officialName": "United Mexican States",
+      "code": "MX",
+      "capital": "Mexico City",
+      "region": "Americas",
+      "subregion": "Central America",
+      "population": 130300000,
+      "areaKm2": 1964375,
+      "currency": {
+        "name": "Mexican Peso",
+        "code": "MXN",
+        "symbol": "$"
+      },
+      "languages": ["Spanish"],
+      "timezone": "UTC-6",
+      "flag": "https://flagcdn.com/mx.svg",
+      "coordinates": {
+        "lat": 23.6345,
+        "lng": -102.5528
+      },
+      "lineName": "Central America Line",
+      "opacity": 0.7
+    },
+    {
+      "id": 10,
+      "name": "South Africa",
+      "officialName": "Republic of South Africa",
+      "code": "ZA",
+      "capital": "Pretoria",
+      "region": "Africa",
+      "subregion": "Southern Africa",
+      "population": 60700000,
+      "areaKm2": 1219090,
+      "currency": {
+        "name": "South African Rand",
+        "code": "ZAR",
+        "symbol": "R"
+      },
+      "languages": ["Zulu", "Xhosa", "Afrikaans", "English"],
+      "timezone": "UTC+2",
+      "flag": "https://flagcdn.com/za.svg",
+      "coordinates": {
+        "lat": -30.5595,
+        "lng": 22.9375
+      },
+      "lineName": "Southern Africa Line",
+      "opacity": 0.75
+    },
+    {
+      "id": 11,
+      "name": "Russia",
+      "officialName": "Russian Federation",
+      "code": "RU",
+      "capital": "Moscow",
+      "region": "Europe/Asia",
+      "subregion": "Eastern Europe / Northern Asia",
+      "population": 146000000,
+      "areaKm2": 17098246,
+      "currency": {
+        "name": "Russian Ruble",
+        "code": "RUB",
+        "symbol": "₽"
+      },
+      "languages": ["Russian"],
+      "timezone": "UTC+2 to UTC+12",
+      "flag": "https://flagcdn.com/ru.svg",
+      "coordinates": {
+        "lat": 61.5240,
+        "lng": 105.3188
+      },
+      "lineName": "Eurasia Line",
+      "opacity": 0.65
+    },
+    {
+      "id": 12,
+      "name": "Egypt",
+      "officialName": "Arab Republic of Egypt",
+      "code": "EG",
+      "capital": "Cairo",
+      "region": "Africa",
+      "subregion": "Northern Africa",
+      "population": 106000000,
+      "areaKm2": 1002450,
+      "currency": {
+        "name": "Egyptian Pound",
+        "code": "EGP",
+        "symbol": "£"
+      },
+      "languages": ["Arabic"],
+      "timezone": "UTC+2",
+      "flag": "https://flagcdn.com/eg.svg",
+      "coordinates": {
+        "lat": 26.8206,
+        "lng": 30.8025
+      },
+      "lineName": "North Africa Line",
+      "opacity": 0.7
+    },
+    {
+      "id": 13,
+      "name": "South Korea",
+      "officialName": "Republic of Korea",
+      "code": "KR",
+      "capital": "Seoul",
+      "region": "Asia",
+      "subregion": "Eastern Asia",
+      "population": 51780000,
+      "areaKm2": 100210,
+      "currency": {
+        "name": "South Korean Won",
+        "code": "KRW",
+        "symbol": "₩"
+      },
+      "languages": ["Korean"],
+      "timezone": "UTC+9",
+      "flag": "https://flagcdn.com/kr.svg",
+      "coordinates": {
+        "lat": 35.9078,
+        "lng": 127.7669
+      },
+      "lineName": "Asia Pacific Line",
+      "opacity": 0.75
     }
   ]
 }

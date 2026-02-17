@@ -4,8 +4,7 @@ import { Await , async } from 'react-router-dom';
 import countries from '../../data/contries.json'
 
 const initialState = {
-  list:[countries] ,        
-  status: 'idle',  
+  list:countries ,  
   error: null,
 }
 const contriesSlice = createSlice({
@@ -14,7 +13,6 @@ const contriesSlice = createSlice({
     reducers:{
       setcontries:(state,action)=>{
         state.list = action.payload
-        state.status = 'succes'
       }
 
     }
