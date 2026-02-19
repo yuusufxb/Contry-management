@@ -1,0 +1,49 @@
+/* Container Layout */
+.countries-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 40px;
+  background-color: #f5f7fa;
+}
+
+/* Card Style */
+.country-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #222;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.country-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Country Name */
+.country-card h1 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+/* Flag Image */
+.country-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #eee;
+}
+
+/* Capital */
+.country-card h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666;
+}
