@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-
+import "./style/detail_style.css";
 
 
 export function Detail(){
