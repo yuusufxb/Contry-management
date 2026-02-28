@@ -19,10 +19,10 @@ export function Navbar(){
             <div className="navbar-select">
                 <select onChange={handleChange}>
                     <option value="">Select by →</option>
-                    <option value="/countries/by-name">Name</option>
-                    <option value="/countries/by-capital">Capital</option>
-                    <option value="/countries/by-population">Population</option>
-                </select>
+                    <option value="/countries/region">Region</option>
+                    <option value="/countries/currency">Currency</option>
+                    <option value="/countries/population">Population</option>
+                </select> 
             </div>
         </div>
     );
