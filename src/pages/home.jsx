@@ -3,10 +3,15 @@ import { setcontries } from "../features/contries/contriesSlice";
 import { useEffect } from "react";
 import { Await, Link } from "react-router-dom";
 import "./style/home_style.css"
+import { fetchContriesData } from "../features/contries/contriesSlice";
 
 export function Home () {
     const dispatch = useDispatch();
+    useEffect(()=>{
+        dispatch(fetchContriesData());
+    },[dispatch])
     const getArray = useSelector((item)=> item.contries.list);
+    const fetchedContries = useSelector((item)=> item.contries.fetchedContries)
     return(
         <div className="countries-container">
             {getArray.countries.map((co) => (
@@ -15,6 +20,10 @@ export function Home () {
                 <img src={co.flag} alt="country flag" />
                 <h3>{co.capital}</h3>
             </Link>
+            ))}
+            {fetchedContries.map((fco)=>(
+                
+                <h1 style={{color:'black'}}>{fco.name.common}</h1>
             ))}
         </div>
     )
