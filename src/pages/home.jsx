@@ -10,20 +10,15 @@ export function Home () {
     useEffect(()=>{
         dispatch(fetchContriesData());
     },[dispatch])
-    const getArray = useSelector((item)=> item.contries.list);
     const fetchedContries = useSelector((item)=> item.contries.fetchedContries)
     return(
         <div className="countries-container">
-            {getArray.countries.map((co) => (
-            <Link to={"/countries/" + co.id} key={co.id} className="country-card">
-                <h1>{co.name}</h1>
-                <img src={co.flag} alt="country flag" />
+            {fetchedContries.map((co) => (
+            <Link to={"/countries/" + co.name.common} key={co.name.common} className="country-card">
+                <h1>{co.name.common}</h1>
+                <img src={co.flag.png} alt="country flag" />
                 <h3>{co.capital}</h3>
             </Link>
-            ))}
-            {fetchedContries.map((fco)=>(
-                
-                <h1 style={{color:'black'}}>{fco.name.common}</h1>
             ))}
         </div>
     )
