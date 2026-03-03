@@ -10,11 +10,21 @@ export const fetchContriesData = createAsyncThunk(
         return data ;
     }
 )
+export const fetcheContriesByName = createAsyncThunk(
+  'contries/fetchByName',
+  async(name)=>{
+    const res = await fetch("https://restcountries.com/v4/name/"+name);
+    //https://restcountries.com/v4/name/
+    const data = await res.json();
+    return data[0] ;
+  }
+)
 
 const initialState = {
   list:countries ,  
   error: null,
-  fetchedContries: []
+  fetchedContries: [],
+  fetchedByName:null
 }
 const contriesSlice = createSlice({
     name:"contries",
@@ -29,6 +39,9 @@ const contriesSlice = createSlice({
       builder
       .addCase(fetchContriesData.fulfilled,(state,action)=>{
           state.fetchedContries = action.payload ;
+      })
+      .addCase(fetcheContriesByName.fulfilled,(state,action)=>{
+          state.fetchedByName = action.payload ;
       })
 
     }

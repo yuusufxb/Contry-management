@@ -1,15 +1,21 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import "./style/detail_style.css";
+import { useEffect } from "react";
+import { fetcheContriesByName } from "../features/contries/contriesSlice";
 
 
 export function Detail(){
+    const dispatch = useDispatch();
     const {id}=useParams();
-    const Countries = useSelector((state)=>state.contries.fetchedContries);
-    const country = Countries.find((contrie)=>contrie.population == Number(id));
+    useEffect(()=>{
+      dispatch(fetcheContriesByName(id));
+    },[dispatch,id  ])
+    const country = useSelector((state)=>state.contries.fetchedByName);
+    if (!country) return <p>Loading...</p>;
     return(
             <div className="detail-container">
-          <div className="detail-card">
+          { country && <div className="detail-card">
             <div className="flag-wrapper">
               <img
                 src={country.flag?.png}
@@ -44,7 +50,7 @@ export function Detail(){
                 </div>
               </div>
             </div>
-          </div>
+          </div>}
     </div>
     );
 }

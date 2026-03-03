@@ -13,7 +13,7 @@ export function Navbar(){
         <div className="navbar">
             <div className="navbar-links">
                 <Link to="/">Home</Link>
-                <Link to="/world-total-population">Total Population</Link>
+                <Link to="/totalpopulation">Total Population</Link>
             </div>
 
             <div className="navbar-select">

@@ -5,6 +5,7 @@ import { Detail } from "./pages/details";
 import { Region } from "./pages/Region";
 import { Population } from "./pages/Population";
 import { Currency } from "./pages/Currency";
+import { TotalPopulation } from "./pages/total_population";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route path="countries/region" element={<Region/>}/>
       <Route path="countries/population" element={<Population/>}/>
       <Route path="countries/Currency" element={<Currency/>}/>
+      <Route path="totalpopulation" element={<TotalPopulation/>}/>
     </Routes>
     </>
   );

@@ -14,7 +14,7 @@ export function Home () {
     return(
         <div className="countries-container">
             {fetchedContries.map((co) => (
-            <Link to={"/countries/" + co.population} key={co.name.common} className="country-card">
+            <Link to={"/countries/" + co.name.common} key={co.name.common} className="country-card">
                 <h1>{co.name.common}</h1>
                 <img src={co.flag.png} alt="country flag" />
                 <h3>{co.capital}</h3>
