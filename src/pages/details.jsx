@@ -5,46 +5,46 @@ import "./style/detail_style.css";
 
 export function Detail(){
     const {id}=useParams();
-    const Countries = useSelector((state)=>state.contries.list.countries);
-    const country = Countries.find((contrie)=>contrie.id == Number(id));
+    const Countries = useSelector((state)=>state.contries.fetchedContries);
+    const country = Countries.find((contrie)=>contrie.population == Number(id));
     return(
-        <div className="detail-container">
-      <div className="detail-card">
-        <img
-          src={country.flag}
-          alt={country.name}
-          className="flag"
-        />
+            <div className="detail-container">
+          <div className="detail-card">
+            <div className="flag-wrapper">
+              <img
+                src={country.flag?.png}
+                alt={country.flag?.alt || "Country flag"}
+                className="flag"
+              />
+            </div>
 
-        <h1>{country.name}</h1>
-        <h3>{country.officialName}</h3>
+            <div className="detail-content">
+              <h1 className="country-name">{country.name.common}</h1>
+              <h3 className="official-name">{country.name.official}</h3>
 
-        <div className="info-grid">
-          <p><strong>Code:</strong> {country.code}</p>
-          <p><strong>Capital:</strong> {country.capital}</p>
-          <p><strong>Region:</strong> {country.region}</p>
-          <p><strong>Subregion:</strong> {country.subregion}</p>
-          <p><strong>Population:</strong> {country.population.toLocaleString()}</p>
-          <p><strong>Area:</strong> {country.areaKm2.toLocaleString()} km²</p>
+              <div className="info-grid">
+                <div className="info-item">
+                  <span>Description</span>
+                  <p>{country.flag?.alt || "No description available"}</p>
+                </div>
 
-          <p>
-            <strong>Currency:</strong> {country.currency.name} ({country.currency.code}) {country.currency.symbol}
-          </p>
+                <div className="info-item">
+                  <span>Capital</span>
+                  <p>{country.capital?.join(", ")}</p>
+                </div>
 
-          <p>
-            <strong>Languages:</strong> {country.languages.join(", ")}
-          </p>
+                <div className="info-item">
+                  <span>Region</span>
+                  <p>{country.region}</p>
+                </div>
 
-          <p><strong>Timezone:</strong> {country.timezone}</p>
-
-          <p>
-            <strong>Coordinates:</strong> {country.coordinates.lat}, {country.coordinates.lng}
-          </p>
-
-          <p><strong>Line Name:</strong> {country.lineName}</p>
-          <p><strong>Opacity:</strong> {country.opacity}</p>
-        </div>
-      </div>
+                <div className="info-item">
+                  <span>Population</span>
+                  <p>{country.population.toLocaleString()}</p>
+                </div>
+              </div>
+            </div>
+          </div>
     </div>
     );
 }
