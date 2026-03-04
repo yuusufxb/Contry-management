@@ -7,6 +7,9 @@ export function TotalPopulation(){
     // API for countries data 'https://restcountries.com/v4/all?fields=name,population,capital,region,flag,language'    
     const totalPop = useSelector((state)=>state.contries.totalPopulation);
     const dispatch = useDispatch();
+    useEffect(()=>{
+            dispatch(fetchContriesData())
+        },[totalPop,dispatch])
     return(
         <>
             <h1>World total population : </h1>
