@@ -1,0 +1,31 @@
+.population-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #9198a1, #a8a8d3);
+  padding: 2rem;
+}
+
+.population-card {
+  background: white;
+  padding: 3rem 4rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  max-width: 600px;
+  width: 100%;
+}
+
+.population-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.population-number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #4f46e5;
+  letter-spacing: 2px;
+}

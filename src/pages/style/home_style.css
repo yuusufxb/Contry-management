@@ -1,11 +1,9 @@
-/* Container */
 .countries-container {
   padding: 2rem;
   background-color: #f4f6f9;
   min-height: 100vh;
 }
 
-/* Search */
 .search-box {
   display: flex;
   justify-content: center;
@@ -69,13 +67,11 @@
   color: #666;
 }
 
-/* Hover effect */
 .country-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
 
-/* Responsive */
 @media (max-width: 600px) {
   .search-input {
     max-width: 100%;
