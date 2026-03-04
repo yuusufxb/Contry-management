@@ -1,49 +1,83 @@
-/* Container Layout */
+/* Container */
 .countries-container {
+  padding: 2rem;
+  background-color: #f4f6f9;
+  min-height: 100vh;
+}
+
+/* Search */
+.search-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.search-input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+/* Grid Layout */
+.countries-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  padding: 40px;
-  background-color: #f5f7fa;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1.8rem;
 }
 
-/* Card Style */
+/* Country Card */
 .country-card {
-  background: white;
-  border-radius: 15px;
-  padding: 20px;
-  text-align: center;
+  background-color: white;
+  border-radius: 12px;
   text-decoration: none;
-  color: #222;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+  color: #333;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Hover Effect */
-.country-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-}
-
-/* Country Name */
-.country-card h1 {
-  font-size: 1.4rem;
-  margin-bottom: 15px;
-}
-
-/* Flag Image */
 .country-card img {
   width: 100%;
   height: 150px;
   object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #eee;
 }
 
-/* Capital */
-.country-card h3 {
-  font-size: 1rem;
-  font-weight: 500;
+.card-content {
+  padding: 1rem;
+}
+
+.card-content h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-content p {
+  font-size: 0.9rem;
   color: #666;
+}
+
+/* Hover effect */
+.country-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .search-input {
+    max-width: 100%;
+  }
 }

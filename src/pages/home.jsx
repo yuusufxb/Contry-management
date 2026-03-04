@@ -12,17 +12,34 @@ export function Home () {
         dispatch(fetchContriesData());
     },[dispatch])
     const fetchedContries = useSelector((item)=> item.contries.fetchedContries)
-    const filteredContries = fetchedContries.filter((item)=>);
+    const filteredContries = fetchedContries.filter((item)=> item.name.common.toLowerCase().includes(search.toLowerCase()))
     return(
         <div className="countries-container">
-            <input type="text" value={search} placeholder="search for a contry" onChange={e =>setsearch(e.target.value)}/> 
-            {filteredContries.map((co) => (
-            <Link to={"/countries/" + co.name.common} key={co.name.common} className="country-card">
-                <h1>{co.name.common}</h1>
-                <img src={co.flag.png} alt="country flag" />
-                <h3>{co.capital}</h3>
-            </Link>
-            ))}
+  <div className="search-box">
+    <input
+      type="text"
+      value={search}
+      placeholder="Search for a country..."
+      onChange={(e) => setsearch(e.target.value)}
+      className="search-input"
+    />
+  </div>
+
+  <div className="countries-grid">
+    {filteredContries.map((co) => (
+      <Link
+        to={"/countries/" + co.name.common}
+        key={co.name.common}
+        className="country-card"
+      >
+        <img src={co.flag.png} alt="country flag" />
+        <div className="card-content">
+          <h2>{co.name.common}</h2>
+          <p>{co.capital?.join(", ") || "No capital"}</p>
         </div>
+      </Link>
+    ))}
+  </div>
+</div>
     )
 }
