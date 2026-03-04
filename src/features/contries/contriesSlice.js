@@ -24,7 +24,8 @@ const initialState = {
   list:countries ,  
   error: null,
   fetchedContries: [],
-  fetchedByName:null
+  fetchedByName:null,
+  totalPopulation:0
 }
 const contriesSlice = createSlice({
     name:"contries",
@@ -39,10 +40,16 @@ const contriesSlice = createSlice({
       builder
       .addCase(fetchContriesData.fulfilled,(state,action)=>{
           state.fetchedContries = action.payload ;
+          const sum = state.fetchedContries.reduce(
+            (total,currentNum)=> total + currentNum.population,
+            0
+          )
+          state.totalPopulation = sum ;
       })
       .addCase(fetcheContriesByName.fulfilled,(state,action)=>{
           state.fetchedByName = action.payload ;
       })
+      
 
     }
 
