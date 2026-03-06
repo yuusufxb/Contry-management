@@ -3,7 +3,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #9198a1, #a8a8d3);
   padding: 2rem;
 }
 
@@ -12,7 +11,7 @@
   padding: 3rem 4rem;
   border-radius: 16px;
   text-align: center;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
   max-width: 600px;
   width: 100%;
 }
