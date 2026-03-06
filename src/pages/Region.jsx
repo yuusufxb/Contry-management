@@ -1,22 +1,25 @@
 import { useSelector } from "react-redux";
 
 
-export function Region(){
+export function Region() {
 
-    const contries = useSelector((item)=>item.contries.fetchedContries.region) ;
-    const uniqueRegion = [...new Set(contries)]
-    return(
+    const contries = useSelector((item) => item.contries.fetchedContries);
+    const regions = contries.map((it) => { return it.region });
+    const uniqueRegions = [...new Set(regions)]
+    console.log(uniqueRegions)
+    return (
         <>
-        <h1>Select By Region</h1>
-        <select onChange={<></>}>
-            <option value="">Select Region →</option>
-            <option value="Europe"></option>
-            <option value="Africa"></option>
-            <option value="Asia"></option>
-            <option value="Americas"></option>
-            <option value="Oceania"></option>
-            <option value="Antarctic"></option>
-        </select>
+            <h1>Select By Region</h1>
+            <select>
+                <option value="">Select Region →</option>
+                {uniqueRegions.map((region)=>(
+                <div>
+                    <option value={region}>{region}</option>
+                </div>
+
+                ))}
+
+            </select>
         </>
-    );    
+    );
 }
