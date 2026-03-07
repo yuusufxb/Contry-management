@@ -18,7 +18,8 @@ export function Region() {
     }
     console.log(regionSelected);
     // 
-    const contriesByRegion = contries.find((co)=> co.Region == regionSelected);
+    const contriesByRegion = contries.filter((co)=>
+        co.region == regionSelected );
     console.log(contriesByRegion);
     return (
         <>
@@ -31,8 +32,21 @@ export function Region() {
                 </div>
 
                 ))}
-
             </select>
+            
+            {contriesByRegion.length > 0 
+                ?<div>
+                    {contriesByRegion.map((co)=>(
+                        <div>
+                            <h1>{co.name.common}</h1>
+                        </div>
+                    ))}
+                </div>
+                :<div>
+                    <p>Select a Region !</p>
+                </div>
+            }
+            
         </>
     );
 }
