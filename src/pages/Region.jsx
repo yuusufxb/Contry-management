@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import './style/region_style.css'
 import { fetchContriesData } from "../features/contries/contriesSlice";
+import { Link } from "react-router-dom";
 
 export function Region() {
     // fetch if not fetched yet
@@ -44,7 +45,8 @@ export function Region() {
             {contriesByRegion.length > 0 ? (
                 <div className="countriesContainer">
                     {contriesByRegion.map((co) => (
-                        <div className="countryCard" key={co.name.common}>
+                        <div className="countryCard" >
+                        <Link key={co.name.common} to={"/contries/"+co.name.common}>
 
                             <img
                                 className="flag"
@@ -67,6 +69,7 @@ export function Region() {
                                 <strong>Region:</strong> {co.region}
                             </p>
 
+                        </Link>
                         </div>
                     ))}
                 </div>
