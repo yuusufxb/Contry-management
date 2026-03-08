@@ -1,8 +1,14 @@
-import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import './style/region_style.css'
+import { fetchContriesData } from "../features/contries/contriesSlice";
 
 export function Region() {
+    // fetch if not fetched yet
+    const dispatch = useDispatch();
+    useEffect(()=>{
+        dispatch(fetchContriesData());
+    },[dispatch])
     // bringing the contries data
     const contries = useSelector((item) => item.contries.fetchedContries);
     const regions = contries.map((it) => { return it.region });
